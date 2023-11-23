@@ -1,5 +1,5 @@
 #=================================================
-# https://github.com/roacn/build-actions
+# https://github.com/hyamine/openwrt-build-actions
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: GNU General Public License v3.0
 # Author: Ss.
@@ -141,7 +141,7 @@ jobs:
         export INPUTS_UPLOAD_CONFIG="${{ github.event.inputs.UPLOAD_CONFIG }}"
         export INPUTS_ENABLE_CCACHE="${{ github.event.inputs.ENABLE_CCACHE }}"
         
-        common_sh_url="https://raw.githubusercontent.com/roacn/common/main/common.sh"
+        common_sh_url="https://raw.githubusercontent.com/hyamine/openwrt-build-common/main/common.sh"
         curl -fsSL ${common_sh_url} -o ${GITHUB_WORKSPACE}/common.sh
         if [[ $? -ne 0 ]]; then
             wget -q ${common_sh_url} -O ${GITHUB_WORKSPACE}/common.sh
@@ -225,7 +225,7 @@ jobs:
     
     - name: 删除releases
       if: env.REPO_TOKEN
-      uses: roacn/delete-older-releases@master
+      uses: hyamine/openwrt-compile-packages@master
       with:
         repo: ${{ github.repository }}
         keep_latest: 7

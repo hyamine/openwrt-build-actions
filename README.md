@@ -8,9 +8,9 @@
 | [![openwrt](https://img.shields.io/badge/source-openwrt-tomato.svg?style=flat&logo=appveyor)](https://github.com/openwrt/openwrt) | 18.06、19.07、21.02、22.03、23.05  | 5.4、5.10、5.15、6.1 | OpenWrt                 |
 | [![lienol](https://img.shields.io/badge/source-Lienol-yellow.svg?style=flat&logo=appveyor)](https://github.com/Lienol/openwrt) | 19.07、21.02、22.03、23.05         | 5.4、5.10、5.15、6.1 |                         |
 | [![Mortal](https://img.shields.io/badge/source-Mortal-green.svg?style=flat&logo=appveyor)](https://github.com/immortalwrt/immortalwrt) | 18.06、21.02、23.05                 | 5.4、5.10、5.15、6.1  |                         |
-| [![apps](https://img.shields.io/badge/actions-roa-red.svg?style=flat&logo=appveyor)](https://github.com/roacn/build-actions) | 18.06、19.07、21.02、22.03、23.05 | 5.4、5.10、5.15、6.1 | 在线编译 |
-| [![apps](https://img.shields.io/badge/packages-roa-orange.svg?style=flat&logo=appveyor)](https://github.com/roacn/openwrt-packages) | 18.06、19.07、21.02、22.03、23.05  | 5.4、5.10、5.15、6.1 | 常用插件库              |
-| [![apps](https://img.shields.io/badge/applications-roa-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/roacn/compile-packages) | 18.06、19.07、21.02、22.03、23.05 | 5.4、5.10、5.15、6.1 | 插件编译，定时更新      |
+| [![apps](https://img.shields.io/badge/actions-roa-red.svg?style=flat&logo=appveyor)](https://github.com/hyamine/openwrt-build-actions) | 18.06、19.07、21.02、22.03、23.05 | 5.4、5.10、5.15、6.1 | 在线编译 |
+| [![apps](https://img.shields.io/badge/packages-roa-orange.svg?style=flat&logo=appveyor)](https://github.com/hyamine/openwrt-packages) | 18.06、19.07、21.02、22.03、23.05  | 5.4、5.10、5.15、6.1 | 常用插件库              |
+| [![apps](https://img.shields.io/badge/applications-roa-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/hyamine/openwrt-compile-packages) | 18.06、19.07、21.02、22.03、23.05 | 5.4、5.10、5.15、6.1 | 插件编译，定时更新      |
 
 使用Lede或Openwrt源码在线编译x86固件！
 
@@ -22,7 +22,7 @@
 
 ---
 
-- [添加secrets](https://github.com/roacn/common/blob/main/doc/secrets.md )
+- [添加secrets](https://github.com/hyamine/openwrt-build-common/blob/main/doc/secrets.md )
 
 | Secrets名称        | 功能                        | 备注 |
 | ------------------ | --------------------------- | ---- |
@@ -35,7 +35,7 @@
 
 
 
-- [开启缓存加速](https://github.com/roacn/common/blob/main/doc/ccache.md)
+- [开启缓存加速](https://github.com/hyamine/openwrt-build-common/blob/main/doc/ccache.md)
 
 
 
@@ -51,7 +51,7 @@
   - PVE lxc容器Openwrt
 
 
-    - 《[lxc容器OpenWrt一键安装、更新](https://github.com/roacn/pve)》
+    - 《[lxc容器OpenWrt一键安装、更新](https://github.com/hyamine/pve-openwrt-tools)》
 
   - 普通OpenWrt
 
