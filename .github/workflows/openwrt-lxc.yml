@@ -107,7 +107,7 @@ env:
   GITHUB_REPOSITORY_REF: ${{github.ref}}
   GITHUB_ACTOR: ${{github.actor}}
   GITHUB_WORKFLOW: ${{github.workflow}}
-  REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+  REPO_TOKEN: ${{ secrets.REPO_TOKEN_OPENWRT }}
   TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
   TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
   PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
@@ -210,7 +210,7 @@ jobs:
         curl \
         -X POST https://api.github.com/repos/${{ github.repository }}/dispatches \
         -H "Accept: application/vnd.github.everest-preview+json" \
-        -H "Authorization: token ${{ secrets.REPO_TOKEN }}" \
+        -H "Authorization: token ${{ secrets.REPO_TOKEN_OPENWRT }}" \
         -d '{"event_type": "编译${{ env.MATRIX_TARGET }}固件", "client_payload": {"target": "${{ env.MATRIX_TARGET }}"}}'
         
   delete-releases-artifacts:
@@ -223,7 +223,7 @@ jobs:
       if: env.REPO_TOKEN
       uses: Mattraks/delete-workflow-runs@v2
       with:
-          token: ${{ secrets.REPO_TOKEN }}
+          token: ${{ secrets.REPO_TOKEN_OPENWRT }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
           retain_days: 7
@@ -236,4 +236,4 @@ jobs:
         keep_latest: 7
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN_OPENWRT }}

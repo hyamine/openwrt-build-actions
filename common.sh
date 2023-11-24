@@ -323,8 +323,6 @@ function update_feeds() {
 		EOF
 	fi
 
-	git status
-	git remote get-url origin
 	# 更新插件源
 	echo "开始清理插件源..."
 	./scripts/feeds clean
