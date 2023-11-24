@@ -329,7 +329,9 @@ function update_feeds() {
 	echo "开始清理插件源..."
 	./scripts/feeds clean
 	__yellow_color "开始更新插件源..."
-	./scripts/feeds update -a > /dev/null 2>&1
+	./scripts/feeds update -a
+	__yellow_color "成功更新插件源..."
+	#./scripts/feeds update -a > /dev/null 2>&1
 	sudo rm -rf ${FEEDS_PATH}/${packages}/{LICENSE,*README*,*readme*,.git,.github,.gitignore} > /dev/null 2>&1
 	
 	# 删除自己插件源不用的文件
